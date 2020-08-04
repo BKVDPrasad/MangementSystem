@@ -1,0 +1,12 @@
+{% extends 'admincommon.html' %}
+{% block common %}
+    {% include 'usermenu.html' %}
+
+    <table>
+    <tr>
+
+        <tr><th><a href="{% url 'addthoughts' %}">Add Thoughts </a> </th></tr>
+    </tr>
+    <tr><th><a href="{% url 'viewall' %}?una={{ name  }}">view all Thoughts</a> </th></tr>
+    </table>
+{% endblock %}

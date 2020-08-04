@@ -1,0 +1,39 @@
+{% extends 'admincommon.html' %}
+
+{% block common %}
+    <h1 style="text-align: center">User Home Login </h1>
+    <h4 style="text-align: center"> username: {{ naem }}</h4>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a  id="a" class="navbar-brand" href="{% url 'though' %}?un={{ naem }}">Thoughts</a>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Events <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Technical <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Work Experience <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Property <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Share Market <span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" style="color: red" href="{% url 'logout' %}">Logout</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+{% endblock %}

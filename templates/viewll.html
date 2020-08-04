@@ -1,0 +1,21 @@
+{% extends 'admincommon.html' %}
+{% block common %}
+    {% include 'usermenu.html' %}
+    <table align="center" border="1">
+    <tr>
+        <th colspan="3" style="text-align: center">view all thoughts</th>
+    </tr>
+    <tr><th>user name </th>
+    <th>description</th>
+        <th>conNo</th>
+    </tr>
+    {% for x in t %}
+        <tr>
+        <th>{{ x.usernaem }}</th>
+        <th>{{ x.description }}</th>
+        <th>{{ x.contno }}</th>
+        </tr>
+
+    {% endfor %}
+    </table>
+{% endblock %}
